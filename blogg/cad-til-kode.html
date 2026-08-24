@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fra CAD til kode: hva maskinteknikk kan lære programmering — DITT NAVN</title>
+<meta name="description" content="Toleranser, sikkerhetsmarginer og hvorfor «god nok» faktisk er et presist mål, ikke en unnskyldning.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c94a1f' stroke-width='1.6'%3E%3Crect x='1' y='1' width='22' height='22'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3Cline x1='12' y1='1' x2='12' y2='6'/%3E%3Cline x1='12' y1='18' x2='12' y2='23'/%3E%3Cline x1='1' y1='12' x2='6' y2='12'/%3E%3Cline x1='18' y1='12' x2='23' y2='12'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container bar">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="22" height="22"/><line x1="12" y1="1" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="23"/><line x1="1" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="23" y2="12"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+      <span>DITT NAVN<small>INGENIØR / UTVIKLER</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" data-i="1">HJEM</a>
+      <a href="../prosjekter.html" data-i="2">PROSJEKTER</a>
+      <a href="../blogg.html" data-i="3" class="active">BLOGG</a>
+      <a href="../index.html#kontakt" data-i="4">KONTAKT</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Bytt tema">
+        <span class="dot"></span><span class="label">BLUEPRINT</span>
+      </button>
+    </div>
+    <button class="nav-toggle" data-nav-toggle type="button" aria-label="Åpne meny">☰</button>
+  </div>
+</nav>
+
+<header class="article-head grid-bg">
+  <div class="container">
+    <div class="tag-row"><span class="tag">Programvare</span><span class="tag">Maskinteknikk</span></div>
+    <h1>Fra CAD til kode: hva maskinteknikk kan lære programmering</h1>
+    <div class="meta-row">
+      <span>2026-07-02</span>
+      <span>6 min lesing</span>
+      <span>DITT NAVN</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <p>Før jeg skrev kode for alvor, tegnet jeg deler. Toleransefelt, passninger, overflateruhet — alt målt i tideler og hundredeler av millimeter. Da jeg begynte å programmere, forventet jeg en helt annen verden. Det jeg fant, var overraskende likt, bare uten språket for det.</p>
+
+    <h2>«Det funker på min maskin» er en toleransefeil</h2>
+    <p>I maskinteknikk finnes det ikke noe som heter «det passer på min fres». En del enten holder seg innenfor toleransen, eller så gjør den ikke det — uavhengig av hvem som lager den eller hvor. Det er nettopp poenget med toleranser: de definerer hvilket rom for variasjon systemet faktisk tåler, slik at delen fungerer sammen med andre deler den aldri har møtt før.</p>
+
+    <p>«Det funker på min maskin» er, når du tenker over det, en toleransefeil forkledd som en vits. Koden er spesifisert for én tilstand (din maskin, din versjon av avhengighetene, ditt operativsystem) i stedet for et definert intervall av tilstander den skal tåle. Løsningen er den samme som i maskinteknikk: definer toleransen eksplisitt — versjonslåste avhengigheter, containere, CI som kjører på ren infrastruktur — i stedet for å stole på at «min maskin» er representativ.</p>
+
+    <h2>Sikkerhetsmarginer er ikke pessimisme</h2>
+    <p>Når vi dimensjonerer en konstruksjon, legger vi alltid inn en sikkerhetsfaktor — ofte et sted mellom 1,5 og 3, avhengig av hvor alvorlige konsekvensene av svikt er. Det er ikke fordi vi tror beregningene er feil. Det er fordi vi vet at virkeligheten alltid har litt mer variasjon enn modellen fanger opp: materialdefekter, uventede laster, slitasje over tid.</p>
+
+    <p>God programvare har det samme instinktet, selv om vi sjelden kaller det en sikkerhetsfaktor:</p>
+    <ul>
+      <li>Rate-limiting satt lavere enn det systemet i teorien tåler.</li>
+      <li>Timeout-verdier med god margin til verste-fall, ikke gjennomsnitt.</li>
+      <li>Kapasitetsplanlegging for 3-5x normal last, ikke akkurat nok.</li>
+    </ul>
+    <p>Forskjellen er at ingeniørfaget har gjort dette eksplisitt og tallfestet i over hundre år. Programvarebransjen finner ofte opp sin egen versjon av det samme, på nytt, etter at noe har falt sammen i produksjon.</p>
+
+    <h2>Iterasjon var aldri unikt for smidig utvikling</h2>
+    <p>Det er lett å tro at rask iterasjon er en oppfinnelse fra programvareverdenen. Men skisser, modeller i mindre skala, og fysiske prototyper har vært standard praksis i ingeniørfaget lenge før noen skrev «MVP» i et dokument. Forskjellen er hva en iterasjon koster:</p>
+
+    <pre><code>Fysisk prototype:  dager til uker, materialkostnad, verkstedtid
+Kode-endring:       minutter til timer, i praksis gratis</code></pre>
+
+    <p>Den lave kostnaden ved å iterere i kode er en enorm fordel — men den kan også bli en unnskyldning for å hoppe over design helt. Når en fysisk prototype er dyr, tvinges du til å tenke grundig gjennom antagelsene dine <em>før</em> du bygger. Det samme nivået av forarbeid lønner seg i kode også, selv om det er fristende å bare begynne å skrive.</p>
+
+    <h2>Det jeg tar med meg</h2>
+    <p>Jeg prøver å bringe tre vaner fra maskinteknikken inn i programvarearbeidet mitt:</p>
+    <ol>
+      <li>Definer toleranser eksplisitt — hva skal systemet faktisk tåle, i tall.</li>
+      <li>Legg inn en bevisst sikkerhetsmargin, og skriv ned hvorfor den er der.</li>
+      <li>Skisser før du bygger, selv om skissen bare tar ti minutter.</li>
+    </ol>
+    <p>Verktøyene er forskjellige. Tankegangen er nesten identisk.</p>
+  </div>
+</article>
+
+<div class="container">
+  <div class="article-foot">
+    <a href="../blogg.html" class="btn">← Alle innlegg</a>
+    <a href="../index.html#kontakt" class="btn btn-primary">Ta kontakt →</a>
+  </div>
+</div>
+
+<footer class="site-footer grid-bg">
+  <div class="container">
+    <div class="grid">
+      <div class="cta-block">
+        <h4>Kontakt</h4>
+        <p>Har du et prosjekt, en jobbmulighet, eller bare vil si hei? Send meg en e-post.</p>
+        <a class="email" href="mailto:torp95@gmail.com">torp95@gmail.com</a>
+      </div>
+      <div>
+        <h4>Naviger</h4>
+        <ul>
+          <li><a href="../index.html">Hjem</a></li>
+          <li><a href="../prosjekter.html">Prosjekter</a></li>
+          <li><a href="../blogg.html">Blogg</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Følg med</h4>
+        <ul>
+          <li><a href="#">GitHub ↗</a></li>
+          <li><a href="#">LinkedIn ↗</a></li>
+          <li><a href="#">CV (PDF) ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 DITT NAVN. Bygget fra bunnen, ikke fra en mal.</span>
+      <span>DOC. 005 / REV. 2026-08-24</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

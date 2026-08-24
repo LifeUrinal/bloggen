@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building in public: et ingeniørblikk på MVP-er — DITT NAVN</title>
+<meta name="description" content="Hva prototyping på verkstedet kan lære oss om å skippe ferdig kode i produksjon.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c94a1f' stroke-width='1.6'%3E%3Crect x='1' y='1' width='22' height='22'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3Cline x1='12' y1='1' x2='12' y2='6'/%3E%3Cline x1='12' y1='18' x2='12' y2='23'/%3E%3Cline x1='1' y1='12' x2='6' y2='12'/%3E%3Cline x1='18' y1='12' x2='23' y2='12'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container bar">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="22" height="22"/><line x1="12" y1="1" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="23"/><line x1="1" y1="12" x2="7" y2="12"/><line x1="17" y1="12" x2="23" y2="12"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+      <span>DITT NAVN<small>INGENIØR / UTVIKLER</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html" data-i="1">HJEM</a>
+      <a href="../prosjekter.html" data-i="2">PROSJEKTER</a>
+      <a href="../blogg.html" data-i="3" class="active">BLOGG</a>
+      <a href="../index.html#kontakt" data-i="4">KONTAKT</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Bytt tema">
+        <span class="dot"></span><span class="label">BLUEPRINT</span>
+      </button>
+    </div>
+    <button class="nav-toggle" data-nav-toggle type="button" aria-label="Åpne meny">☰</button>
+  </div>
+</nav>
+
+<header class="article-head grid-bg">
+  <div class="container">
+    <div class="tag-row"><span class="tag">Produktutvikling</span><span class="tag">MVP</span></div>
+    <h1>Building in public: et ingeniørblikk på MVP-er</h1>
+    <div class="meta-row">
+      <span>2026-08-10</span>
+      <span>4 min lesing</span>
+      <span>DITT NAVN</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <p>På verkstedet bygger man aldri den ferdige delen først. Man bygger en test­rigg av kapp og skruer, en «funker det i det hele tatt»-versjon, lenge før noe ser ut som det endelige produktet. Ingen forventer at testriggen skal være pen. Den skal svare på ett spørsmål: holder ideen?</p>
+
+    <p>Det er egentlig det en MVP er. Problemet er at ordet «produkt» i MVP lurer oss til å tro at det skal se ut og oppføre seg som et produkt. Det skal det ikke. Det skal oppføre seg som en test­rigg.</p>
+
+    <h2>Hva en testrigg faktisk er god for</h2>
+    <p>En testrigg er bevisst dårlig på alt den ikke skal teste. Den er stygg, den er ikke skalerbar, og den går i stykker på måter et ferdig produkt aldri får lov til å gjøre. Men den er presis på det ene den <em>skal</em> svare på: tåler denne sveisen lasten? Holder denne algoritmen for de dataene vi faktisk får inn?</p>
+
+    <p>Overført til programvare betyr det at en god MVP har lov til å:</p>
+    <ul>
+      <li>Ha en manuell prosess der et ferdig produkt ville hatt automatikk.</li>
+      <li>Mangle feilhåndtering for tilfeller du ennå ikke vet om skjer.</li>
+      <li>Se stygg ut, så lenge det den skal bevise faktisk blir bevist.</li>
+    </ul>
+
+    <p>Den har derimot <strong>ikke</strong> lov til å være vag om hva den tester. En testrigg uten et definert spørsmål er bare rot i en krok av verkstedet.</p>
+
+    <blockquote>Spør ikke «hva er den enkleste versjonen av produktet», spør «hva er det billigste eksperimentet som svarer på om ideen holder».</blockquote>
+
+    <h2>Building in public er en åpen testrigg</h2>
+    <p>Å bygge i det åpne — dele fremgang, prototyper og til og med feilslag underveis — er egentlig det samme som å la andre ingeniører se testriggen din før den ferdige delen er klar. Det er ubehagelig, fordi vi er vant til å bare vise frem det som er poleret. Men det har samme fordel i programvare som i et verksted: andre kan se en feil i oppsettet før du har kastet bort tre uker på å bygge videre på den.</p>
+
+    <p>Det krever litt disiplin å gjøre riktig:</p>
+    <ol>
+      <li>Vær tydelig på at det er en testrigg, ikke et løfte om et ferdig produkt.</li>
+      <li>Del det spesifikke spørsmålet du prøver å svare på, ikke bare fremdriften.</li>
+      <li>Vær ærlig når testen feiler — det er like mye informasjon som når den lykkes.</li>
+    </ol>
+
+    <h2>Når testriggen blir til produktet</h2>
+    <p>Faren med både fysiske testrigger og MVP-er i kode er at de har en tendens til å snike seg inn i det endelige produktet, fordi «det funker jo». Det er verdt å stoppe og spørre: er dette fortsatt riggen, eller har vi begynt å bygge det ferdige produktet oppå et fundament som aldri var ment å bære det?</p>
+
+    <p>Det er ikke noe galt i å gjenbruke deler av en testrigg. Men det bør være et bevisst valg — ikke noe som skjer fordi ingen tok seg tid til å bygge på nytt med riktige toleranser.</p>
+  </div>
+</article>
+
+<div class="container">
+  <div class="article-foot">
+    <a href="../blogg.html" class="btn">← Alle innlegg</a>
+    <a href="../index.html#kontakt" class="btn btn-primary">Ta kontakt →</a>
+  </div>
+</div>
+
+<footer class="site-footer grid-bg">
+  <div class="container">
+    <div class="grid">
+      <div class="cta-block">
+        <h4>Kontakt</h4>
+        <p>Har du et prosjekt, en jobbmulighet, eller bare vil si hei? Send meg en e-post.</p>
+        <a class="email" href="mailto:torp95@gmail.com">torp95@gmail.com</a>
+      </div>
+      <div>
+        <h4>Naviger</h4>
+        <ul>
+          <li><a href="../index.html">Hjem</a></li>
+          <li><a href="../prosjekter.html">Prosjekter</a></li>
+          <li><a href="../blogg.html">Blogg</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Følg med</h4>
+        <ul>
+          <li><a href="#">GitHub ↗</a></li>
+          <li><a href="#">LinkedIn ↗</a></li>
+          <li><a href="#">CV (PDF) ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 DITT NAVN. Bygget fra bunnen, ikke fra en mal.</span>
+      <span>DOC. 006 / REV. 2026-08-24</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
