@@ -26,7 +26,7 @@ python3 -m http.server 8000
 
 Dette er en ferdig mal med eksempelinnhold. Før publisering:
 
-1. **Navn/branding** — søk og erstatt `DITT NAVN` i alle HTML-filer.
+1. **Navn/branding** — navnet er satt til `JOHANNES TORP`. Søk og erstatt om du vil endre det.
 2. **Prosjekter** (`prosjekter.html` og forsidens utvalg) — alle kort merket med taggen "Eksempel" er plassholdere. Bytt ut med dine egne prosjekter og fjern taggen.
 3. **Blogginnlegg** (`blogg/*.html`) — de tre innleggene er skrevet som ferdige eksempeltekster i din stemme. Behold, rediger eller erstatt dem, og legg til nye ved å kopiere en av filene i `blogg/`-mappen og lenke den opp i `blogg.html` og forsiden.
 4. **Kontakt** — e-postadressen er allerede satt til torp95@gmail.com. GitHub/LinkedIn/CV-lenker i footeren har `#` som placeholder og må fylles inn.
