@@ -14,6 +14,15 @@
  */
 const POSTS = [
   {
+    slug: "ubehagelige-sannheter",
+    title: "Ubehagelige sannheter",
+    excerpt: "Om politisk uavhengige sannheter, harde fakta og statsbudsjetter i underskudd — og hvorfor Norge er en annen historie.",
+    date: "2026-08-25",
+    tags: ["Samfunn", "Politikk"],
+    readingTime: "2 min lesing",
+    pinned: false
+  },
+  {
     slug: "bygge-i-det-apne",
     title: "Building in public: et ingeniørblikk på MVP-er",
     excerpt: "Hva prototyping på verkstedet kan lære oss om å skippe ferdig kode i produksjon, og hvorfor «god nok til å teste» er en egen disiplin.",
