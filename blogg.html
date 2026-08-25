@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blogg — JOHANNES TORP</title>
 <meta name="description" content="Tanker om ingeniørfag, programvare og alt i skjæringspunktet, fra JOHANNES TORP.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c94a1f' stroke-width='1.6'%3E%3Crect x='1' y='1' width='22' height='22'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3Cline x1='12' y1='1' x2='12' y2='6'/%3E%3Cline x1='12' y1='18' x2='12' y2='23'/%3E%3Cline x1='1' y1='12' x2='6' y2='12'/%3E%3Cline x1='18' y1='12' x2='23' y2='12'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bb4a24' stroke-width='1.6'%3E%3Crect x='1' y='1' width='22' height='22'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3Cline x1='12' y1='1' x2='12' y2='6'/%3E%3Cline x1='12' y1='18' x2='12' y2='23'/%3E%3Cline x1='1' y1='12' x2='6' y2='12'/%3E%3Cline x1='18' y1='12' x2='23' y2='12'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,35 +42,33 @@
 
 <section class="section" style="padding-top:56px;">
   <div class="container">
-    <div class="post-list">
-
-      <a class="post-row" href="blogg/bygge-i-det-apne.html">
-        <span class="date mono">2026-08-10</span>
-        <span class="body">
-          <h3>Building in public: et ingeniørblikk på MVP-er</h3>
-          <p>Hva prototyping på verkstedet kan lære oss om å skippe ferdig kode i produksjon, og hvorfor «god nok til å teste» er en egen disiplin.</p>
-        </span>
-        <span class="arrow mono">→</span>
-      </a>
-
-      <a class="post-row" href="blogg/cad-til-kode.html">
-        <span class="date mono">2026-07-02</span>
-        <span class="body">
-          <h3>Fra CAD til kode: hva maskinteknikk kan lære programmering</h3>
-          <p>Toleranser, sikkerhetsmarginer og hvorfor «god nok» faktisk er et presist mål, ikke en unnskyldning.</p>
-        </span>
-        <span class="arrow mono">→</span>
-      </a>
-
-      <a class="post-row" href="blogg/tanker-om-constraints.html">
-        <span class="date mono">2026-05-18</span>
-        <span class="body">
-          <h3>Hvorfor jeg elsker begrensninger i ingeniørarbeid</h3>
-          <p>De beste løsningene kommer sjelden fra ubegrenset frihet — de kommer fra harde krav og trange marginer.</p>
-        </span>
-        <span class="arrow mono">→</span>
-      </a>
-
+    <div class="post-list" id="all-posts">
+      <noscript>
+        <a class="post-row" href="blogg/bygge-i-det-apne.html">
+          <span class="date mono">2026-08-10</span>
+          <span class="body">
+            <h3>Building in public: et ingeniørblikk på MVP-er</h3>
+            <p>Hva prototyping på verkstedet kan lære oss om å skippe ferdig kode i produksjon, og hvorfor «god nok til å teste» er en egen disiplin.</p>
+          </span>
+          <span class="arrow mono">→</span>
+        </a>
+        <a class="post-row" href="blogg/cad-til-kode.html">
+          <span class="date mono">2026-07-02</span>
+          <span class="body">
+            <h3>Fra CAD til kode: hva maskinteknikk kan lære programmering</h3>
+            <p>Toleranser, sikkerhetsmarginer og hvorfor «god nok» faktisk er et presist mål, ikke en unnskyldning.</p>
+          </span>
+          <span class="arrow mono">→</span>
+        </a>
+        <a class="post-row" href="blogg/tanker-om-constraints.html">
+          <span class="date mono">2026-05-18</span>
+          <span class="body">
+            <h3>Hvorfor jeg elsker begrensninger i ingeniørarbeid</h3>
+            <p>De beste løsningene kommer sjelden fra ubegrenset frihet — de kommer fra harde krav og trange marginer.</p>
+          </span>
+          <span class="arrow mono">→</span>
+        </a>
+      </noscript>
     </div>
   </div>
 </section>
@@ -107,6 +105,8 @@
   </div>
 </footer>
 
+<script src="js/posts-data.js"></script>
+<script src="js/posts.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
